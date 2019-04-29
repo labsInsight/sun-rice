@@ -5,6 +5,7 @@
 # Demo
 
 - [demo 地址](https://stg1-wechat.jinbaochuang.com/sun-rice/#/)
+- [document 地址](http://public.jinbaochuang.com/sun-rice-doc/)
 
 ![image](https://activity-photo-1255552770.cos.ap-chengdu.myqcloud.com/sun-rice/logo.png)
 
