@@ -4,7 +4,7 @@
  
 # Demo
 
-- [demo 地址](https://stg1-wechat.jinbaochuang.com/sun-rice/#/)
+- [demo 地址](http://public.jinbaochuang.com/sun-rice/)
 - [document 地址](http://public.jinbaochuang.com/sun-rice-doc/)
 
 ![image](https://activity-photo-1255552770.cos.ap-chengdu.myqcloud.com/sun-rice/logo.png)
@@ -68,3 +68,6 @@ npm run dev
 ## Contribution
 
 Please make sure to read the [Contributing Guide](https://github.com/labsInsight/sun-rice/blob/master/src/doctype/CONTRIBUTING_zh-cn.md) before making a pull request.
+
+## License
+MIT
