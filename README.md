@@ -67,4 +67,4 @@ npm run dev
 
 ## Contribution
 
-Please make sure to read the [Contributing Guide](http://git.jbc.com/h5-template/sun-rice/blob/dev/.doctype/CONTRIBUTING_zh-cn.md) before making a pull request.
+Please make sure to read the [Contributing Guide](https://github.com/labsInsight/sun-rice/blob/master/src/doctype/CONTRIBUTING_zh-cn.md) before making a pull request.
