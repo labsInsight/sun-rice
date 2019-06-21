@@ -205,6 +205,8 @@ export default ({
       z-index: 999;
       position: fixed;
       bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 }

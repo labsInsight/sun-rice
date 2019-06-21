@@ -9,7 +9,8 @@
         <div v-if="label" v-text="label" class="sun-cell-name-label" />
       </slot>
     </div>
-    <div v-if="value || $slots.default" :class="['sun-cell-value', { alone: !$slots.title && !title }]" :style="`max-width: ${labelWidth}px`">
+      <div v-if="value === 0 || value === '0' || value || $slots.default" :class="['sun-cell-value', { alone: !$slots.title && !title }]" :style="`max-width: ${labelWidth}px`">
+
       <slot>
         <span v-text="value" />
       </slot>

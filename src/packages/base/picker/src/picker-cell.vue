@@ -1,7 +1,8 @@
 <template>
   <div class="sun-picker-cell">
     <sun-cell :title="title" :value="computeValue" :border="border" center clickable arrowDirection="right" @click="clickCell">
-      <slot name="extra" v-if="placeholder && !computeValue"><span class="sun-picker-cell-placeholder">{{placeholder}}</span></slot>
+      <slot name="extra" v-if="placeholder && !(computeValue === 0 || computeValue === '0' || computeValue)"><span class="sun-picker-cell-placeholder">{{placeholder}}</span></slot>
+
     </sun-cell>
 
     <div class="sun-picker-cell-modal" v-if="showPicker"></div>
@@ -106,9 +107,9 @@ export default ({
       this.allowBodyScroll()
     },
     getDefaultValue() {
-      if (this.value) {
+      if (this.value === 0 || this.value === '0' || this.value) {
         const data = this.value
-        const reg = /^\+?[1-9][0-9]*$/ // 正整数
+        const reg = /^([1-9]\d*|[0]{1,1})$/ // 0加正整数
         if (reg.test(data)) {
           this.value = data
           this.computeValue = this.queryCode(data)
@@ -195,6 +196,7 @@ export default ({
       position: fixed;
       bottom: 0;
       left: 0;
+      right: 0;
     }
   }
 }
