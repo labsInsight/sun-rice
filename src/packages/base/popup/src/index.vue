@@ -81,7 +81,6 @@ export default ({
     transition: 0.2s ease-out;
     -webkit-overflow-scrolling: touch;
     transform: translate3d(-50%, -50%, 0);
-    text-align: center;
 
     @descendent top {
       width: 100%;

@@ -3,7 +3,10 @@
     <sun-cell :title="title" :value="career" :border="border" center clickable arrowDirection="right" @click="clickCell">
       <slot name="extra" v-if="placeholder && !career"><span class="sun-career-picker-placeholder">{{placeholder}}</span></slot>
     </sun-cell>
-    <sun-actionsheet v-model="show" :close-on-click-overlay="false">
+    <div class="sun-bottom-line" v-if="bottomLine"></div>
+
+    <sun-popup v-model="show" :zIndex="zIndex" position="bottom" :get-container="getContainer"
+      :close-on-click-overlay="closeOnClickOverlay ">
       <div class="sun-career-picker-toolbar sun-line-top-bottom">
         <div class="sun-career-picker-cancel" @click="cancelPicker">{{ activeIndex === 0 ? '取消' : '返回' }}</div>
         <div class="sun-career-picker-title sun-ellipsis" v-if="keyConfig[activeIndex]" v-text="keyConfig[activeIndex].name" />
@@ -26,18 +29,20 @@
           <img class="sun-career-picker-list-icon" v-if="item.code === pickerValue.code" src="../../../assets/selected.png" />
         </div>
       </div>
-    </sun-actionsheet>
+    </sun-popup>
+
   </div>
 </template>
 
 <script>
 import SunActionsheet from '../../../base/actionsheet'
 import { SunCell } from '../../../base/cell'
+import SunPopup from '../../../base/popup'
 
 export default ({
   name: 'sun-career-picker',
 
-  components: { SunActionsheet, SunCell },
+  components: { SunActionsheet, SunCell, SunPopup },
 
   props: {
     value: {
@@ -61,7 +66,22 @@ export default ({
       type: Object,
       default: () => { }
     },
-    disabled: Boolean
+    disabled: Boolean,
+    zIndex: {
+      type: [String, Number],
+      default: '2000'
+    },
+    getContainer: {
+      type: Function,
+      default: () => {
+        return document.getElementsByTagName('body')[0]
+      }
+    },
+    closeOnClickOverlay: Boolean,
+    bottomLine: {
+      type: Boolean,
+      default: true
+    }
   },
   computed: {
     currentList() {

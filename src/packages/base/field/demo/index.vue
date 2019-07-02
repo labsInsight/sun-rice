@@ -53,7 +53,7 @@
     <div class="block">
       <div class="text">禁用按钮</div>
       <div class="items">
-        <sun-field value="输入框已禁用" label="不给输" disabled />
+        <sun-field v-model="value14" label="不给输" disabled />
       </div>
     </div>
 
@@ -96,6 +96,7 @@ export default {
       value11: '',
       value12: '',
       value13: '',
+      value14: '已禁用',
       errMsg: '',
       dynamicCode: ''
     }

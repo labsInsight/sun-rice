@@ -11,29 +11,29 @@
       </slot>
     </sun-cell>
     <div class="sun-idcard-picker-pickers" v-if="termType === 'short'">
-      <div class="sun-idcard-picker-pickers-lable">起始日期：</div>
+      <!-- <div class="sun-idcard-picker-pickers-lable">起始日期：</div> -->
       <div class="sun-idcard-picker-pickers-inputs">
         <div class="sun-idcard-picker-pickers-inputs-item" @click="clickCell('start')">
           <i class="sun-idcard-picker-pickers-inputs-icon"></i>
           <span type="text" class="sun-idcard-picker-pickers-inputs-input" :class="startDate ? '' : 'sun-idcard-picker-pickers-inputs-placeholder'"
             >{{startDate ?
-            startDate :'请选择日期'}}</span>
+            startDate :'请选择开始日期'}}</span>
         </div>
+        <div class="sun-idcard-picker-pickers-inputs-label">至</div>
         <div class="sun-idcard-picker-pickers-inputs-item" @click="clickCell('end')" >
           <i class="sun-idcard-picker-pickers-inputs-icon"></i>
-          <span type="text" class="sun-idcard-picker-pickers-inputs-input" :class="endDate ? '' : 'sun-idcard-picker-pickers-inputs-placeholder'"
-            style="margin-left: 10px">{{endDate
-            ? endDate: '请选择日期'}}</span>
+          <span type="text" class="sun-idcard-picker-pickers-inputs-input" :class="endDate ? '' : 'sun-idcard-picker-pickers-inputs-placeholder'">{{endDate
+            ? endDate: '请选择结束日期'}}</span>
         </div>
       </div>
     </div>
+    <div class="sun-bottom-line" v-if="bottomLine"></div>
 
-    <div class="sun-idcard-picker-modal" v-if="showPicker"></div>
-
-    <transition name="sun-slide-bottom">
+    <sun-popup v-model="showPicker" :zIndex="zIndex" position="bottom" :get-container="getContainer"
+      :close-on-click-overlay="closeOnClickOverlay ">
       <sun-datetime-picker v-show="showPicker" type="date" :value="computeDate" showToolbar :minDate="minDate" :maxDate="maxDate"
         @cancel="onCancel" @confirm="onConfirm" />
-    </transition>
+    </sun-popup>
   </div>
 </template>
 
@@ -41,11 +41,12 @@
 import { SunDatetimePicker } from '../../../base/datetime-picker'
 import SunButton from '../../../base/button'
 import { SunCell } from '../../../base/cell'
+import SunPopup from '../../../base/popup'
 
 export default ({
   name: 'sun-idcard-picker',
 
-  components: { SunDatetimePicker, SunCell, SunButton },
+  components: { SunDatetimePicker, SunCell, SunButton, SunPopup },
 
   props: {
     title: {
@@ -62,7 +63,22 @@ export default ({
     maxDate: {
       type: Date
     },
-    disabled: Boolean
+    disabled: Boolean,
+    zIndex: {
+      type: [String, Number],
+      default: '2000'
+    },
+    getContainer: {
+      type: Function,
+      default: () => {
+        return document.getElementsByTagName('body')[0]
+      }
+    },
+    closeOnClickOverlay: Boolean,
+    bottomLine: {
+      type: Boolean,
+      default: true
+    }
   },
 
   data() {
@@ -227,7 +243,7 @@ export default ({
       color: $gray;
       height: 45px;
       line-height: 30px;
-      padding: 0 15px 15px;
+      padding: 2px 15px 15px;
       font-size: 14px;
       background-color: $white;
       display: flex;
@@ -252,6 +268,12 @@ export default ({
         flex: 1;
         display: flex;
 
+        @descendent label {
+          color: #484848;
+          width: 40px;
+          text-align: center;
+        }
+
         @descendent item {
           position: relative;
           display: inline-block;
@@ -274,7 +296,7 @@ export default ({
           border: 1px solid #ddd;
           border-radius: 3px;
           padding: 0 5px;
-          width: 120px;
+          width: 150px;
           height: 30px;
           font-size: 1em;
           color: $text-color;
@@ -283,23 +305,6 @@ export default ({
           color: $placeholder-color;
         }
       }
-    }
-
-    @descendent modal {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 888;
-    }
-    .sun-picker {
-      z-index: 999;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
     }
   }
 }

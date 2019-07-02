@@ -232,15 +232,6 @@ export default ({
         top: 50%;
         left: 50%;
       }
-      /* .sun-loading {
-        top: 50%;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        position: absolute;
-        pointer-events: none;
-        transform: translateY(-50%);
-      } */
     }
 
     @descendent frame {

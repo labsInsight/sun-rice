@@ -3,13 +3,14 @@
     <sun-cell :title="title" :value="address" :border="border" center clickable arrowDirection="right" @click="clickCell">
       <slot name="extra" v-if="placeholder && !address"><span class="sun-address-picker-cell-placeholder">{{placeholder}}</span></slot>
     </sun-cell>
+    <div class="sun-bottom-line" v-if="bottomLine"></div>
 
-    <div class="sun-address-picker-cell-modal" v-if="showPicker"></div>
-    <transition name="sun-slide-bottom">
+    <sun-popup v-model="showPicker" :zIndex="zIndex" position="bottom" :get-container="getContainer"
+      :close-on-click-overlay="closeOnClickOverlay ">
       <sun-address-picker v-show="showPicker" :area-list="areaList" :title="title" :value="value" :loading="loading"
         :columnsNum="columnsNum" :itemHeight="itemHeight" :visible-item-count="visibleItemCount" @cancel="onCancel"
         @confirm="onConfirm" />
-    </transition>
+    </sun-popup>
   </div>
 </template>
 
@@ -17,11 +18,12 @@
 import SunAddressPicker from './address-picker'
 import { SunCell } from '../../../base/cell'
 import AreaListDefault from './area'
+import SunPopup from '../../../base/popup'
 
 export default ({
   name: 'sun-address-picker-cell',
 
-  components: { SunAddressPicker, SunCell },
+  components: { SunAddressPicker, SunCell, SunPopup },
 
   props: {
     areaList: {
@@ -66,7 +68,22 @@ export default ({
       type: String,
       default: 'county_list'
     },
-    disabled: Boolean
+    disabled: Boolean,
+    zIndex: {
+      type: [String, Number],
+      default: '2000'
+    },
+    getContainer: {
+      type: Function,
+      default: () => {
+        return document.getElementsByTagName('body')[0]
+      }
+    },
+    closeOnClickOverlay: Boolean,
+    bottomLine: {
+      type: Boolean,
+      default: true
+    }
   },
 
   data() {
@@ -190,24 +207,8 @@ export default ({
         background-image: none;
       }
     }
-
-    @descendent modal {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 888;
-    }
     @descendent placeholder {
       color: $placeholder-color;
-    }
-    .sun-picker {
-      z-index: 999;
-      position: fixed;
-      bottom: 0;
-      left: 0;
     }
   }
 }

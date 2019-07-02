@@ -7,9 +7,15 @@
         <sun-button class="item" @click.native="popupVisible2 = true" size="large">底部弹出 popup</sun-button>
         <sun-button class="item" @click.native="popupVisible3 = true" size="large">顶部弹出 popup</sun-button>
         <sun-button class="item" @click.native="popupVisible4 = true" size="large">右侧弹出 popup</sun-button>
-        <sun-popup v-model="popupVisible1">我是从中部弹出</sun-popup>
-        <sun-popup v-model="popupVisible2" position="bottom">我是从底部弹出</sun-popup>
-        <sun-popup v-model="popupVisible3" position="top" :overlay="false">我是从顶部弹出</sun-popup>
+        <sun-popup v-model="popupVisible1">
+          <sun-button @click="popupVisible4 = false" size="large">我是从中部弹出</sun-button>
+        </sun-popup>
+        <sun-popup v-model="popupVisible2" position="bottom">
+          <sun-button @click="popupVisible4 = false" size="large">我是从底部弹出</sun-button>
+        </sun-popup>
+        <sun-popup v-model="popupVisible3" position="top" :overlay="false">
+          <sun-button @click="popupVisible4 = false" size="large">我是从顶部弹出</sun-button>
+        </sun-popup>
         <sun-popup v-model="popupVisible4" position="right">
           <sun-button @click="popupVisible4 = false" size="large">关闭</sun-button>
         </sun-popup>
@@ -65,7 +71,6 @@ export default {
 </script>
 
 <style scoped lang="scss" >
-
 .group {
   display: flex;
   flex-direction: column;

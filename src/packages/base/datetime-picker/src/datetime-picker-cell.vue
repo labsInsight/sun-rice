@@ -3,25 +3,27 @@
     <sun-cell :title="title" :value="computeValue" :border="border" center clickable arrowDirection="right" @click="clickCell">
       <slot name="extra" v-if="placeholder && !computeValue"><span class="sun-picker-cell-placeholder">{{placeholder}}</span></slot>
     </sun-cell>
+    <div class="sun-bottom-line" v-if="bottomLine"></div>
 
-    <div class="sun-picker-cell-modal" v-if="showPicker"></div>
-    <transition name="sun-slide-bottom">
+    <sun-popup v-model="showPicker" :zIndex="zIndex" position="bottom" :get-container="getContainer"
+      :close-on-click-overlay="closeOnClickOverlay ">
       <sun-datetime-picker v-show="showPicker" :title="title" :value="computeDate" :border="border" :itemHeight="itemHeight"
         :visibleItemCount="visibleItemCount" :confirmButtonText="confirmButtonText" :cancelButtonText="cancelButtonText"
         :type="type" :showToolbar="showToolbar" :format="format" :minDate="minDate" :maxDate="maxDate" :minHour="minHour"
         :maxHour="maxHour" @cancel="onCancel" @confirm="onConfirm" />
-    </transition>
+    </sun-popup>
   </div>
 </template>
 
 <script>
 import SunDatetimePicker from './datetime-picker'
 import { SunCell } from '../../cell'
+import SunPopup from '../../popup'
 
 export default ({
   name: 'sun-datetime-picker-cell',
 
-  components: { SunDatetimePicker, SunCell },
+  components: { SunDatetimePicker, SunCell, SunPopup },
 
   props: {
     title: {
@@ -73,7 +75,22 @@ export default ({
       type: String,
       default: ''
     },
-    disabled: Boolean
+    disabled: Boolean,
+    zIndex: {
+      type: [String, Number],
+      default: '2000'
+    },
+    getContainer: {
+      type: Function,
+      default: () => {
+        return document.getElementsByTagName('body')[0]
+      }
+    },
+    closeOnClickOverlay: Boolean,
+    bottomLine: {
+      type: Boolean,
+      default: true
+    }
   },
 
   data() {
@@ -188,25 +205,8 @@ export default ({
       }
     }
 
-    @descendent modal {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 888;
-    }
-
     @descendent placeholder {
       color: $placeholder-color;
-    }
-    .sun-picker {
-      z-index: 999;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
     }
   }
 }
