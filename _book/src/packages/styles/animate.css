@@ -1,0 +1,57 @@
+@keyframes sun-slide-bottom-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes sun-slide-bottom-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.sun-slide-bottom-enter-active {
+  animation: sun-slide-bottom-enter .3s both;
+}
+
+.sun-slide-bottom-leave-active {
+  animation: sun-slide-bottom-leave .3s both;
+}
+
+@keyframes sun-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sun-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.sun-fade-enter-active {
+  animation: .3s sun-fade-in;
+}
+
+.sun-fade-leave-active {
+  animation: .3s sun-fade-out;
+}
+
+@keyframes sun-spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
