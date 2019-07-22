@@ -1,11 +1,10 @@
 # sun-rice
 
 > Mobile UI elements for **Vue 2.0**
- 
+
 # Demo
 
-- [demo 地址](http://public.jinbaochuang.com/sun-rice/)
-- [document 地址](http://public.jinbaochuang.com/sun-rice-doc/)
+- [demo 地址](https://stg1-wechat.jinbaochuang.com/sun-rice/#/)
 
 ![image](https://activity-photo-1255552770.cos.ap-chengdu.myqcloud.com/sun-rice/logo.png)
 
@@ -67,7 +66,4 @@ npm run dev
 
 ## Contribution
 
-Please make sure to read the [Contributing Guide](https://github.com/labsInsight/sun-rice/blob/master/src/doctype/CONTRIBUTING_zh-cn.md) before making a pull request.
-
-## License
-MIT
+Please make sure to read the [Contributing Guide](http://git.jbc.com/h5-template/sun-rice/blob/dev/.doctype/CONTRIBUTING_zh-cn.md) before making a pull request.
