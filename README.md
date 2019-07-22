@@ -9,7 +9,7 @@
 ![image](https://activity-photo-1255552770.cos.ap-chengdu.myqcloud.com/sun-rice/logo.png)
 
 ## Tutorial
-- 点击查看[使用教程](./SUMMARY.md)
+> 点击查看[使用教程](./SUMMARY.md)
 
 ## Installation
 
