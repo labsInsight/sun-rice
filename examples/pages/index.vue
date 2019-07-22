@@ -1,20 +1,20 @@
 <template>
   <div class="group">
-    <s-cell title="基础组件" clickable :arrowDirection="baseDirection" @click="onBaseClick" />
+    <s-cell title="基础组件" clickable :arrowDirection="baseDirection" @click="onTelescoping('baseDirection')" />
     <div v-if="baseDirection=='down'" class="items">
       <s-cell title="Cell" value="单元格" clickable @click="() => this.$router.push({ name: 'Cell' })" />
       <s-cell title="Button" value="按钮" clickable @click="() => this.$router.push({ name: 'Button' })" />
       <s-cell title="Spinner" value="旋转动画" clickable @click="() => this.$router.push({ name: 'Spinner' })" />
     </div>
 
-    <s-cell title="导航组件" clickable :arrowDirection="advanceDirection" @click="onAdvanceClick" />
+    <s-cell title="导航组件" clickable :arrowDirection="advanceDirection" @click="onTelescoping('advanceDirection')" />
     <div v-if="advanceDirection=='down'" class="items">
       <s-cell title="Tab" value="标签页" clickable @click="() => this.$router.push({ name: 'Tab' })" />
       <s-cell title="Tabbar" value="底部标签栏" clickable @click="() => this.$router.push({ name: 'Tabbar' })" />
     </div>
 
-    <s-cell title="数据录入" clickable :arrowDirection="advanceDirection" @click="onAdvanceClick" />
-    <div v-if="advanceDirection=='down'" class="items">
+    <s-cell title="数据录入" clickable :arrowDirection="dataEntry" @click="onTelescoping('dataEntry')" />
+    <div v-if="dataEntry=='down'" class="items">
       <s-cell title="Field" value="输入框" clickable @click="() => this.$router.push({ name: 'Field' })" />
       <s-cell title="Checkbox" value="复选框" clickable @click="() => this.$router.push({ name: 'Checkbox' })" />
       <s-cell title="Radio" value="单选框" clickable @click="() => this.$router.push({ name: 'Radio' })" />
@@ -25,8 +25,8 @@
       <s-cell title="Stepper" value="步进器" clickable @click="() => this.$router.push({ name: 'Stepper' })" />
     </div>
 
-    <s-cell title="数据展示" clickable :arrowDirection="advanceDirection" @click="onAdvanceClick" />
-    <div v-if="advanceDirection=='down'" class="items">
+    <s-cell title="数据展示" clickable :arrowDirection="dataExhibition" @click="onTelescoping('dataExhibition')" />
+    <div v-if="dataExhibition=='down'" class="items">
       <s-cell title="Swipe" value="轮播" clickable @click="() => this.$router.push({ name: 'Swipe' })" />
       <s-cell title="Steps" value="步骤条" clickable @click="() => this.$router.push({ name: 'Steps' })" />
       <s-cell title="NoticeBar" value="通告栏" clickable @click="() => this.$router.push({ name: 'NoticeBar' })" />
@@ -34,8 +34,8 @@
       <s-cell title="Collapse" value="折叠面板" clickable @click="() => this.$router.push({ name: 'Collapse' })" />
     </div>
 
-    <s-cell title="操作反馈" clickable :arrowDirection="advanceDirection" @click="onAdvanceClick" />
-    <div v-if="advanceDirection=='down'" class="items">
+    <s-cell title="操作反馈" clickable :arrowDirection="operationalFeedback" @click="onTelescoping('operationalFeedback')" />
+    <div v-if="operationalFeedback=='down'" class="items">
       <s-cell title="NumberKeyboard" value="自定义键盘" clickable @click="() => this.$router.push({ name: 'NumberKeyboard' })" />
       <s-cell title="Toast" value="提示" clickable @click="() => this.$router.push({ name: 'Toast' })" />
       <s-cell title="Popup" value="弹出层" clickable @click="() => this.$router.push({ name: 'Popup' })" />
@@ -47,11 +47,11 @@
       <s-cell title="ImagePreview" value="图片预览" clickable @click="() => this.$router.push({ name: 'ImagePreview' })" />
     </div>
 
-    <s-cell title="高阶组件" clickable :arrowDirection="advanceDirection" @click="onAdvanceClick" />
-    <div v-if="advanceDirection=='down'" class="items">
+    <s-cell title="高阶组件" clickable :arrowDirection="senior" @click="onTelescoping('senior')" />
+    <div v-if="senior=='down'" class="items">
       <s-cell title="Lazyload" value="懒加载" clickable @click="() => this.$router.push({ name: 'Lazyload' })" />
     </div>
-    <s-cell title="业务组件" clickable :arrowDirection="busDirection" @click="onBusClick" />
+    <s-cell title="业务组件" clickable :arrowDirection="busDirection" @click="onTelescoping('busDirection')" />
     <div v-if="busDirection=='down'" class="items">
       <s-cell title="AddressPicker" value="地址选择器" clickable @click="() => this.$router.push({ name: 'AddressPicker' })" />
       <s-cell title="SubmitBar" value="提交订单" clickable @click="() => this.$router.push({ name: 'SubmitBar' })" />
@@ -66,20 +66,18 @@ export default {
   name: 'demo',
   data() {
     return {
-      baseDirection: 'down',
-      advanceDirection: 'down',
-      busDirection: 'down'
+      baseDirection: 'up',
+      advanceDirection: 'up',
+      busDirection: 'up',
+      dataEntry: 'up',
+      dataExhibition: 'up',
+      operationalFeedback: 'up',
+      senior: 'up'
     }
   },
   methods: {
-    onBaseClick() {
-      this.baseDirection = this.baseDirection === 'up' ? 'down' : 'up'
-    },
-    onAdvanceClick() {
-      this.advanceDirection = this.advanceDirection === 'up' ? 'down' : 'up'
-    },
-    onBusClick() {
-      this.busDirection = this.busDirection === 'up' ? 'down' : 'up'
+    onTelescoping(name) {
+      this[name] = this[name] === 'up' ? 'down' : 'up'
     }
   }
 }

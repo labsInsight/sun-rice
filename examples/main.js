@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { install as SunRice } from '../src'
+import SunRice from '../src'
 
 Vue.use(SunRice)
 
