@@ -17,7 +17,7 @@ Vue.use(SunIdcardPicker)
 通过`v-model`绑定日期，格式为数组，单个日期的格式可以为`date`或者`string`
 
 ```html
-<sun-idcard-picker
+<s-idcard-picker
   title="身份证有效期"
   v-model="value"
   @confirm="onConfirm"

@@ -12,12 +12,12 @@ Vue.use(SunStep).use(SunSteps);
 #### 基础用法
 
 ```html
-<sun-steps :active="active">
-  <sun-step>买家下单</sun-step>
-  <sun-step>商家接单</sun-step>
-  <sun-step>买家提货</sun-step>
-  <sun-step>交易完成</sun-step>
-</sun-steps>
+<s-steps :active="active">
+  <s-step>买家下单</s-step>
+  <s-step>商家接单</s-step>
+  <s-step>买家提货</s-step>
+  <s-step>交易完成</s-step>
+</s-steps>
 ```
 
 ```javascript
@@ -35,36 +35,36 @@ export default {
 通过`title`和`description`属性来定义描述信息信息
 
 ```html
-<sun-steps
+<s-steps
   :active="active"
   title="标题"
   description="描述信息"
 >
-  <sun-step>买家下单</sun-step>
-  <sun-step>商家接单</sun-step>
-  <sun-step>买家提货</sun-step>
-  <sun-step>交易完成</sun-step>
-</sun-steps>
+  <s-step>买家下单</s-step>
+  <s-step>商家接单</s-step>
+  <s-step>买家提货</s-step>
+  <s-step>交易完成</s-step>
+</s-steps>
 ```
 
 #### 竖向步骤条
 可以通过设置`direction`属性来改变步骤条的显示方式
 
 ```html
-<sun-steps direction="vertical" :active="0" active-color="#f60">
-  <sun-step>
+<s-steps direction="vertical" :active="0" active-color="#f60">
+  <s-step>
     <h3>【城市】物流状态1</h3>
     <p>2016-07-12 12:40</p>
-  </sun-step>
-  <sun-step>
+  </s-step>
+  <s-step>
     <h3>【城市】物流状态2</h3>
     <p>2016-07-11 10:00</p>
-  </sun-step>
-  <sun-step>
+  </s-step>
+  <s-step>
     <h3>快件已发货</h3>
     <p>2016-07-10 09:30</p>
-  </sun-step>
-</sun-steps>
+  </s-step>
+</s-steps>
 ```
 
 ### Steps API

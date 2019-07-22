@@ -15,21 +15,21 @@ Vue.use(SunField);
 通过 v-model 绑定输入框的值
 
 ```html
-<sun-field v-model="value" inputAlign="left" placeholder="请输入用户名" />
+<s-field v-model="value" inputAlign="left" placeholder="请输入用户名" />
 ```
 
 #### 自定义类型
 根据`type`属性定义不同类型的输入框
 
 ```html
-<sun-field
+<s-field
   v-model="username"
   required
   label="用户名"
   :leftIcon="leftIcon"
   placeholder="请输入用户名"
 />
-<sun-field
+<s-field
   v-model="password"
   type="password"
   label="密码"
@@ -42,7 +42,7 @@ Vue.use(SunField);
 可删除和添加提示
 
 ```html
-<sun-field
+<s-field
   v-model="username"
   required
   clearable
@@ -57,7 +57,7 @@ Vue.use(SunField);
 textfield
 
 ```html
-<sun-field
+<s-field
   v-model="message"
   label="留言"
   type="textarea"
@@ -71,28 +71,28 @@ textfield
 普通提示以及错误消息提示
 
 ```html
-<sun-field
+<s-field
   v-model="username"
   required
   label="用户名"
   :leftIcon="leftIcon"
   placeholder="请输入用户名"
 />
-<sun-field
+<s-field
   v-model="mobile"
   type="tel"
   label="手机号码"
   placeholder="请输入手机号码"
   required
 />
-<sun-field
+<s-field
   v-model="number"
   type="number"
   label="数字"
   placeholder="请输入数字"
   required
 />
-<sun-field
+<s-field
   v-model="password"
   type="password"
   label="密码"
@@ -105,7 +105,7 @@ textfield
 不可输入
 
 ```html
-<sun-field
+<s-field
   value="输入框已禁用"
   label="不给输"
   disabled
@@ -116,15 +116,15 @@ textfield
 通过 button slot 可以在输入框尾部插入按钮
 
 ```html
-<sun-field
+<s-field
   v-model="sms"
   center
   clearable
   label="短信验证码"
   placeholder="请输入短信验证码"
 >
-  <sun-button slot="button" size="small" type="primary">发送验证码</sun-button>
-</sun-field>
+  <s-button slot="button" size="small" type="primary">发送验证码</s-button>
+</s-field>
 ```
 
 ### API

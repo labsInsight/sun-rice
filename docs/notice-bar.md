@@ -13,7 +13,7 @@ Vue.use(SunNoticeBar)
 #### 基础用法
 
 ```html
-<sun-notice-bar
+<s-notice-bar
   text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
   left-icon="https://img.yzcdn.cn/1.png"
 />
@@ -24,9 +24,9 @@ Vue.use(SunNoticeBar)
 文字内容多于一行时，可通过`scrollable`参数控制是否开启滚动
 
 ```html
-<sun-notice-bar :scrollable="false">
+<s-notice-bar :scrollable="false">
   足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。
-</sun-notice-bar>
+</s-notice-bar>
 ```
 
 #### 通告栏模式
@@ -35,17 +35,17 @@ Vue.use(SunNoticeBar)
 
 ```html
 <!-- closeable 模式，在右侧显示关闭按钮 -->
-<sun-notice-bar mode="closeable">
+<s-notice-bar mode="closeable">
   足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。
-</sun-notice-bar>
+</s-notice-bar>
 
 <!-- link 模式，在右侧显示链接箭头 -->
-<sun-notice-bar mode="link">
+<s-notice-bar mode="link">
   足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。
-</sun-notice-bar>
+</s-notice-bar>
 
 <!-- 自定义颜色 -->
-<sun-notice-bar
+<s-notice-bar
   text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大淘汰富力"
   color="#fff"
   background="#606266"

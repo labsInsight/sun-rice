@@ -13,9 +13,9 @@ Vue.use(SunPullRefresh);
 下拉刷新时会触发 `refresh` 事件，在事件的回调函数中可以进行同步或异步操作，操作完成后将 `v-model` 设置为 `false`，表示加载完成。
 
 ```html
-<sun-pull-refresh v-model="isLoading" @refresh="onRefresh">
+<s-pull-refresh v-model="isLoading" @refresh="onRefresh">
   <p>刷新次数: {{ count }}</p>
-</sun-pull-refresh>
+</s-pull-refresh>
 ```
 
 ```javascript

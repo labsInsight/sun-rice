@@ -11,13 +11,13 @@ Vue.use(SuncareerPicker)
 #### 基础用法
 
 ```html
-<sun-career-picker
+<s-career-picker
   v-model="value"
   title="职业"
   :keyConfig="keyConfig"
   :options="josn"
   @finish="finishPicker"
-></sun-career-picker>
+></s-career-picker>
 ```
 
 ```js

@@ -13,23 +13,23 @@ Vue.use(SunSwipeItem).use(SunSwipe);
 通过`autoplay`属性设置自动轮播间隔
 
 ```html
-<sun-swipe :autoplay="3000">
-  <sun-swipe-item>1</sun-swipe-item>
-  <sun-swipe-item>2</sun-swipe-item>
-  <sun-swipe-item>3</sun-swipe-item>
-  <sun-swipe-item>4</sun-swipe-item>
-</sun-swipe>
+<s-swipe :autoplay="3000">
+  <s-swipe-item>1</s-swipe-item>
+  <s-swipe-item>2</s-swipe-item>
+  <s-swipe-item>3</s-swipe-item>
+  <s-swipe-item>4</s-swipe-item>
+</s-swipe>
 ```
 
 #### 图片懒加载
 配合 [Lazyload](#/zh-CN/lazyload) 组件实现图片懒加载
 
 ```html
-<sun-swipe :autoplay="3000">
-  <sun-swipe-item v-for="(image, index) in images" :key="index">
+<s-swipe :autoplay="3000">
+  <s-swipe-item v-for="(image, index) in images" :key="index">
     <img v-lazy="image" />
-  </sun-swipe-item>
-</sun-swipe>
+  </s-swipe-item>
+</s-swipe>
 ```
 
 ```javascript
@@ -48,12 +48,12 @@ export default {
 #### 监听 change 事件
 
 ```html
-<sun-swipe @change="onChange">
-  <sun-swipe-item>1</sun-swipe-item>
-  <sun-swipe-item>2</sun-swipe-item>
-  <sun-swipe-item>3</sun-swipe-item>
-  <sun-swipe-item>4</sun-swipe-item>
-</sun-swipe>
+<s-swipe @change="onChange">
+  <s-swipe-item>1</s-swipe-item>
+  <s-swipe-item>2</s-swipe-item>
+  <s-swipe-item>3</s-swipe-item>
+  <s-swipe-item>4</s-swipe-item>
+</s-swipe>
 ```
 
 ```js
@@ -69,12 +69,12 @@ export default {
 #### 纵向滚动
 
 ```html
-<sun-swipe :autoplay="3000" vertical>
-  <sun-swipe-item>1</sun-swipe-item>
-  <sun-swipe-item>2</sun-swipe-item>
-  <sun-swipe-item>3</sun-swipe-item>
-  <sun-swipe-item>4</sun-swipe-item>
-</sun-swipe>
+<s-swipe :autoplay="3000" vertical>
+  <s-swipe-item>1</s-swipe-item>
+  <s-swipe-item>2</s-swipe-item>
+  <s-swipe-item>3</s-swipe-item>
+  <s-swipe-item>4</s-swipe-item>
+</s-swipe>
 ```
 
 ### API

@@ -17,7 +17,7 @@ Vue.use(SunDatetimePicker)
 通过`type`设置时间类型，通过`format`设置时间格式
 
 ```html
-<sun-datetime-picker-cell
+<s-datetime-picker-cell
   :value="currentDate"
   type="datetime"
   format="yyyy-MM-dd hh:mm"
@@ -37,7 +37,7 @@ export default {
 #### 选择完整时间
 
 ```html
-<sun-datetime-picker
+<s-datetime-picker
   v-model="currentDate"
   type="datetime"
   :min-date="minDate"
@@ -62,7 +62,7 @@ export default {
 #### 选择日期（年月日）
 
 ```html
-<sun-datetime-picker v-model="currentDate" type="date" :min-date="minDate" />
+<s-datetime-picker v-model="currentDate" type="date" :min-date="minDate" />
 ```
 
 ```js
@@ -78,7 +78,7 @@ export default {
 #### 选择日期（年月）
 
 ```html
-<sun-datetime-picker
+<s-datetime-picker
   v-model="currentDate"
   type="year-month"
   :min-date="minDate"
@@ -98,7 +98,7 @@ export default {
 #### 选择时间
 
 ```html
-<sun-datetime-picker
+<s-datetime-picker
   v-model="currentDate"
   type="time"
   :min-hour="minHour"

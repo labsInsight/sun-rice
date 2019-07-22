@@ -13,31 +13,31 @@ Vue.use(SunSwitch)
 #### 基础用法
 
 ```html
-<sun-switch v-model="checked" />
+<s-switch v-model="checked" />
 ```
 
 #### 禁用状态
 
 ```html
-<sun-switch v-model="checked" disabled />
+<s-switch v-model="checked" disabled />
 ```
 
 #### 加载状态
 
 ```html
-<sun-switch v-model="checked" loading />
+<s-switch v-model="checked" loading />
 ```
 
 #### 调节大小
 
 ```html
-<sun-switch v-model="checked" :size="30" />
+<s-switch v-model="checked" :size="30" />
 ```
 
 #### 内嵌文字
 
 ```html
-<sun-switch v-model="checked" :text="['男', '女']" />
+<s-switch v-model="checked" :text="['男', '女']" />
 ```
 
 #### 自定义颜色
@@ -45,23 +45,23 @@ Vue.use(SunSwitch)
 通过绑定`class`改变`backgroundColor`和`color`
 
 ```html
-<sun-switch v-model="checked" :text="['男', '女']" class="changeColor" />
+<s-switch v-model="checked" :text="['男', '女']" class="changeColor" />
 ```
 
 #### sun-switch-cell 用法
 
 ```html
-<sun-switch-cell :title="'基础用法" v-model="checked" />
-<sun-switch-cell v-model="checked" loading />
-<sun-switch-cell v-model="checked" disabled />
-<sun-switch-cell v-model="checked" :text="['男', '女']" />
-<sun-switch-cell v-model="checked" :des="['男人', '女人']" />
+<s-switch-cell :title="'基础用法" v-model="checked" />
+<s-switch-cell v-model="checked" loading />
+<s-switch-cell v-model="checked" disabled />
+<s-switch-cell v-model="checked" :text="['男', '女']" />
+<s-switch-cell v-model="checked" :des="['男人', '女人']" />
 ```
 
 #### sun-switch-cell 是否有 border
 
 ```html
-<sun-switch-cell border v-model="checked" />
+<s-switch-cell border v-model="checked" />
 ```
 
 ### sun-switch API

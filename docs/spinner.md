@@ -12,28 +12,28 @@ Vue.use(SunLoading);
 #### 基础方法
 
 ```html
-<sun-spinner type="snake" />
-<sun-spinner type="double-bounce" />
-<sun-spinner type="triple-bounce" />
-<sun-spinner type="fading-circle" />
+<s-spinner type="snake" />
+<s-spinner type="double-bounce" />
+<s-spinner type="triple-bounce" />
+<s-spinner type="fading-circle" />
 ```
 
 #### 不同大小
 
 ```html
-<sun-spinner :size="40" type="snake" />
-<sun-spinner :size="40" type="double-bounce" />
-<sun-spinner :size="40" type="triple-bounce" />
-<sun-spinner :size="40" />
+<s-spinner :size="40" type="snake" />
+<s-spinner :size="40" type="double-bounce" />
+<s-spinner :size="40" type="triple-bounce" />
+<s-spinner :size="40" />
 ```
 
 #### 不同颜色
 
 ```html
-<sun-spinner color="#ccc" type="snake" />
-<sun-spinner color="#f44" type="double-bounce" />
-<sun-spinner color="#38f" type="triple-bounce" />
-<sun-spinner color="#f60" />
+<s-spinner color="#ccc" type="snake" />
+<s-spinner color="#f44" type="double-bounce" />
+<s-spinner color="#38f" type="triple-bounce" />
+<s-spinner color="#f60" />
 ```
 
 ### API

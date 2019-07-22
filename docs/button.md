@@ -13,58 +13,58 @@ Vue.use(SunButton);
 支持`default`、`primary`、`danger`、`text`几种类型，默认为`default`
 
 ```html
-<sun-button type="default" @click="onClick">默认按钮</sun-button>
-<sun-button type="primary" @click="onClick">主要按钮</sun-button>
-<sun-button type="danger" @click="onClick">危险按钮</sun-button>
-<sun-button class="item" type="text" @click="onClick">文字按钮</sun-button>
+<s-button type="default" @click="onClick">默认按钮</s-button>
+<s-button type="primary" @click="onClick">主要按钮</s-button>
+<s-button type="danger" @click="onClick">危险按钮</s-button>
+<s-button class="item" type="text" @click="onClick">文字按钮</s-button>
 ```
 
 #### 朴素按钮
 通过`plain`控制是否空心，支持`default`、`primary`、`danger`三种类型，默认为`false`
 
 ```html
-<sun-button type="default" plain @click="onClick">朴素按钮</sun-button>
-<sun-button type="primary" plain @click="onClick">朴素按钮</sun-button>
-<sun-button type="danger" plain @click="onClick">朴素按钮</sun-button>
+<s-button type="default" plain @click="onClick">朴素按钮</s-button>
+<s-button type="primary" plain @click="onClick">朴素按钮</s-button>
+<s-button type="danger" plain @click="onClick">朴素按钮</s-button>
 ```
 
 #### 按钮尺寸
 支持`large`、`normal`、`small`、`mini`四种尺寸，默认为`normal`
 
 ```html
-<sun-button size="large">大号按钮</sun-button>
-<sun-button size="normal">普通按钮</sun-button>
-<sun-button size="small">小型按钮</sun-button>
-<sun-button size="mini">迷你按钮</sun-button>
+<s-button size="large">大号按钮</s-button>
+<s-button size="normal">普通按钮</s-button>
+<s-button size="small">小型按钮</s-button>
+<s-button size="mini">迷你按钮</s-button>
 ```
 
 #### 选中按钮
 `checked=true`
 
 ```html
-<sun-button checked>选中状态</sun-button>
+<s-button checked>选中状态</s-button>
 ```
 
 #### 禁用状态
 通过`disabled`属性来禁用按钮，此时按钮不可点击
 
 ```html
-<sun-button disabled>禁用状态</sun-button>
+<s-button disabled>禁用状态</s-button>
 ```
 
 #### 加载状态
 `loading=true`
 
 ```html
-<sun-button loading />
-<sun-button loading type="primary" />
+<s-button loading />
+<s-button loading type="primary" />
 ```
 
 #### 块级元素
 `block=true`
 
 ```html
-<sun-button class="item" block>块级按钮</sun-button>
+<s-button class="item" block>块级按钮</s-button>
 ```
 
 #### 自定义
@@ -72,18 +72,18 @@ Vue.use(SunButton);
 
 
 ```html
-<sun-button class="item">
+<s-button class="item">
     <template slot="extra-left"><img :src="iconUrl" /></template>按钮
-</sun-button>
-<sun-button class="item">
+</s-button>
+<s-button class="item">
     <template slot="extra-right"><img :src="iconUrl" /></template>按钮
-</sun-button>
+</s-button>
 ```
 
 #### 页面底部操作按钮
 
 ```html
-<sun-button type="primary" bottom-action>按钮</sun-button>
+<s-button type="primary" bottom-action>按钮</s-button>
 ```
 
 ### API

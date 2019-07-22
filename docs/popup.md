@@ -13,7 +13,7 @@ Vue.use(SunPopup);
 `popup`默认从中间弹出
 
 ```html
-<sun-popup v-model="show">内容</sun-popup>
+<s-popup v-model="show">内容</s-popup>
 ```
 
 ```javascript
@@ -30,9 +30,9 @@ export default {
 通过`position`属性设置 Popup 弹出位置
 
 ```html
-<sun-popup v-model="show" position="top" :overlay="false">
+<s-popup v-model="show" position="top" :overlay="false">
   内容
-</sun-popup>
+</s-popup>
 ```
 
 ### API

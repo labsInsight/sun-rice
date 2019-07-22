@@ -15,7 +15,7 @@ Vue.use(SunPicker)
 #### cell 用法
 
 ```html
-<sun-picker-cell
+<s-picker-cell
   title="地区"
   v-model="value"
   :columns="column1"
@@ -23,7 +23,7 @@ Vue.use(SunPicker)
   placeholder="请选择城市"
 />
 
-<sun-picker-cell
+<s-picker-cell
   title="多列+自定义数据"
   v-model="value2"
   :columns="column2"
@@ -67,7 +67,7 @@ export default {
 #### 基础用法
 
 ```html
-<sun-picker :columns="columns" @change="onChange" />
+<s-picker :columns="columns" @change="onChange" />
 ```
 
 ```javascript
@@ -90,7 +90,7 @@ export default {
 当数据为对象时，通过`value-key`来绑定需要展示的文本
 
 ```html
-<sun-picker :columns="column" :value-key="'label'" />
+<s-picker :columns="column" :value-key="'label'" />
 ```
 
 ```javascript
@@ -112,7 +112,7 @@ export default {
 选项可以为对象结构，通过设置 disabled 来禁用该选项
 
 ```html
-<sun-picker :columns="columns" />
+<s-picker :columns="columns" />
 ```
 
 ```javascript
@@ -132,7 +132,7 @@ export default {
 #### 展示头部
 
 ```html
-<sun-picker
+<s-picker
   show-toolbar
   title="标题"
   :columns="columns"
@@ -162,7 +162,7 @@ export default {
 #### 多列联动
 
 ```html
-<sun-picker :columns="columns" @change="onChange" />
+<s-picker :columns="columns" @change="onChange" />
 ```
 
 ```javascript
@@ -200,7 +200,7 @@ export default {
 当 Picker 数据是通过异步获取时，可以通过 `loading` 属性显示加载提示
 
 ```html
-<sun-picker :columns="columns" loading />
+<s-picker :columns="columns" loading />
 ```
 
 ### API

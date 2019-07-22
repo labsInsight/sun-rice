@@ -12,18 +12,18 @@ Vue.use(SunBadge);
 #### 基础用法
 
 ```html
-<sun-badge type="primary" size="small">10</sun-badge>
-<sun-badge type="error" size="small">10</sun-badge>
-<sun-badge type="success" size="small">10</sun-badge>
-<sun-badge type="warning" size="small">10</sun-badge>
+<s-badge type="primary" size="small">10</s-badge>
+<s-badge type="error" size="small">10</s-badge>
+<s-badge type="success" size="small">10</s-badge>
+<s-badge type="warning" size="small">10</s-badge>
 ```
 
 #### 不同大小
 
 ```html
-<sun-badge type="primary" size="small">100</sun-badge>
-<sun-badge type="primary" size="normal">100</sun-badge>
-<sun-badge type="primary" size="large">100</sun-badge>
+<s-badge type="primary" size="small">100</s-badge>
+<s-badge type="primary" size="normal">100</s-badge>
+<s-badge type="primary" size="large">100</s-badge>
 ```
 
 #### 不同颜色
@@ -31,7 +31,7 @@ Vue.use(SunBadge);
 自定义颜色
 
 ```html
-<sun-badge size="small" color="#888">自定义颜色</sun-badge>
+<s-badge size="small" color="#888">自定义颜色</s-badge>
 ```
 
 

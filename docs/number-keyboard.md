@@ -12,11 +12,11 @@ Vue.use(SunNumberKeyboard);
 #### 默认样式
 
 ```html
-<sun-button @touchstart.native.stop="show = true">
+<s-button @touchstart.native.stop="show = true">
   弹出默认键盘
-</sun-button>
+</s-button>
 
-<sun-number-keyboard
+<s-number-keyboard
   :show="show"
   extra-key="."
   close-button-text="完成"
@@ -48,7 +48,7 @@ export default {
 #### 自定义样式
 
 ```html
-<sun-number-keyboard
+<s-number-keyboard
   :show="show"
   theme="custom"
   extra-key="."

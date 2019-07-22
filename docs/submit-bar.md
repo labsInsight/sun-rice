@@ -12,7 +12,7 @@ Vue.use(SunSubmitBar);
 #### 基础用法
 
 ```html
-<sun-submit-bar
+<s-submit-bar
   :price="3050"
   button-text="提交订单"
   @submit="onSubmit"
@@ -23,7 +23,7 @@ Vue.use(SunSubmitBar);
 禁用状态下不会触发`submit`事件
 
 ```html
-<sun-submit-bar
+<s-submit-bar
   disabled
   :price="3050"
   button-text="提交订单"
@@ -36,7 +36,7 @@ Vue.use(SunSubmitBar);
 加载状态下不会触发`submit`事件
 
 ```html
-<sun-submit-bar
+<s-submit-bar
   loading
   :price="3050"
   button-text="提交订单"
@@ -48,16 +48,16 @@ Vue.use(SunSubmitBar);
 通过 slot 插入自定义内容
 
 ```html
-<sun-submit-bar
+<s-submit-bar
   :price="3050"
   button-text="提交订单"
   @submit="onSubmit"
 >
-  <sun-checkbox v-model="checked">全选</sun-checkbox>
+  <s-checkbox v-model="checked">全选</s-checkbox>
   <span slot="tip">
     您的收货地址不支持同城送, <span>修改地址</span>
   </span>
-</sun-submit-bar>
+</s-submit-bar>
 ```
 
 ### API

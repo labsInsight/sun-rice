@@ -13,26 +13,26 @@ Vue.use(SunTabbarItem).use(SunTabbar);
 
 
 ```html
-<sun-tabbar v-model="active">
-  <sun-tabbar-item>
+<s-tabbar v-model="active">
+  <s-tabbar-item>
     <span>标记1</span>
     <template slot="icon" slot-scope="props">
       <img :src="props.active ? icon.active : icon.normal" />
     </template>
-  </sun-tabbar-item>
-  <sun-tabbar-item dot>
+  </s-tabbar-item>
+  <s-tabbar-item dot>
     <span>标记2</span>
     <template slot="icon" slot-scope="props">
       <img :src="props.active ? icon.active : icon.normal" />
     </template>
-  </sun-tabbar-item>
-  <sun-tabbar-item info='22'>
+  </s-tabbar-item>
+  <s-tabbar-item info='22'>
     <span>标记3</span>
     <template slot="icon" slot-scope="props">
       <img :src="props.active ? icon.active : icon.normal" />
     </template>
-  </sun-tabbar-item>
-</sun-tabbar>
+  </s-tabbar-item>
+</s-tabbar>
 ```
 
 ```javascript

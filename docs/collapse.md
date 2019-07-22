@@ -13,17 +13,17 @@ Vue.use(SunCollapseItem).use(SunCollapse);
 通过`v-model`控制展开的面板列表，`activeNames`为数组格式
 
 ```html
-<sun-collapse v-model="activeNames">
-  <sun-collapse-item title="标题标题" name="1">
+<s-collapse v-model="activeNames">
+  <s-collapse-item title="标题标题" name="1">
     内容内容内容
-  </sun-collapse-item>
-  <sun-collapse-item title="标题标题" name="2">
+  </s-collapse-item>
+  <s-collapse-item title="标题标题" name="2">
     内容内容内容
-  </sun-collapse-item>
-  <sun-collapse-item title="标题标题" name="3">
+  </s-collapse-item>
+  <s-collapse-item title="标题标题" name="3">
     内容内容内容
-  </sun-collapse-item>
-</sun-collapse>
+  </s-collapse-item>
+</s-collapse>
 ```
 
 ``` javascript
@@ -40,17 +40,17 @@ export default {
 通过`accordion`可以设置为手风琴模式，最多展开一个面板，此时`activeName`为字符串格式
 
 ```html
-<sun-collapse v-model="activeName" accordion>
-  <sun-collapse-item title="标题标题" name="1">
+<s-collapse v-model="activeName" accordion>
+  <s-collapse-item title="标题标题" name="1">
     内容内容内容
-  </sun-collapse-item>
-  <sun-collapse-item title="标题标题" name="2">
+  </s-collapse-item>
+  <s-collapse-item title="标题标题" name="2">
     内容内容内容
-  </sun-collapse-item>
-  <sun-collapse-item title="标题标题" name="3">
+  </s-collapse-item>
+  <s-collapse-item title="标题标题" name="3">
     内容内容内容
-  </sun-collapse-item>
-</sun-collapse>
+  </s-collapse-item>
+</s-collapse>
 ```
 
 ``` javascript
@@ -66,15 +66,15 @@ export default {
 #### 自定义标题内容
 
 ```html
-<sun-collapse v-model="activeNames">
-  <sun-collapse-item name="1">
+<s-collapse v-model="activeNames">
+  <s-collapse-item name="1">
     <div slot="title">标题标题<van-icon name="question" /></div>
     内容内容内容
-  </sun-collapse-item>
-  <sun-collapse-item title="标题标题" name="2">
+  </s-collapse-item>
+  <s-collapse-item title="标题标题" name="2">
     内容内容内容
-  </sun-collapse-item>
-</sun-collapse>
+  </s-collapse-item>
+</s-collapse>
 ```
 
 

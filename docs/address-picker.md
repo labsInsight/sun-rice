@@ -17,7 +17,7 @@ Vue.use(SunAddressPicker).use(SunAddressPickerCell)
 要初始化一个`Area`组件，你需要传入一个`area-list`属性，数据格式具体可看下面数据格式章节
 
 ```html
-<sun-address-picker :area-list="areaList" />
+<s-address-picker :area-list="areaList" />
 ```
 
 #### cell 用法
@@ -25,7 +25,7 @@ Vue.use(SunAddressPicker).use(SunAddressPickerCell)
 如果想选中某个默认的省市县，需要传入一个`computeValue`属性，绑定对应的省市县`code`
 
 ```html
-<sun-address-picker-cell
+<s-address-picker-cell
   title="省市区"
   :computeValue="value1"
   @confirm="onConfirm1"
@@ -38,7 +38,7 @@ Vue.use(SunAddressPicker).use(SunAddressPickerCell)
 如果想选中某个省市县，需要传入一个`value`属性，绑定对应的省市县`code`
 
 ```html
-<sun-address-picker :area-list="areaList" value="110101" />
+<s-address-picker :area-list="areaList" value="110101" />
 ```
 
 #### 配置显示列
@@ -46,7 +46,7 @@ Vue.use(SunAddressPicker).use(SunAddressPickerCell)
 可以通过`columns-num`属性配置省市县显示的列数，默认情况下会显示省市县，当你设置为`2`，则只会显示省市选择
 
 ```html
-<sun-address-picker :area-list="areaList" :columns-num="2" title="标题" />
+<s-address-picker :area-list="areaList" :columns-num="2" title="标题" />
 ```
 
 ### API

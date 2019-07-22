@@ -88,23 +88,23 @@ export default {
 如果需要在弹窗内实现更复杂的交互，可以通过组件形式来调用 Dialog
 
 ```html
-<sun-dialog
+<s-dialog
   v-model="show"
   show-cancel-button
   :before-close="beforeClose"
 >
-  <sun-field
+  <s-field
     v-model="username"
     label="用户名"
     placeholder="请输入用户名"
   />
-  <sun-field
+  <s-field
     v-model="password"
     type="password"
     label="密码"
     placeholder="请输入密码"
   />
-</sun-dialog>
+</s-dialog>
 ```
 
 ```js

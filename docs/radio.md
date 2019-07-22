@@ -15,7 +15,7 @@ Vue.use(SunRadio).use(SunRadioGroup)
 通过`v-model`绑定值当前选中项的 name，通过`options`绑定选项,通过`@change`绑定事件
 
 ```html
-<sun-radio v-model="value1" :options="options1" @change="changeValue" />
+<s-radio v-model="value1" :options="options1" @change="changeValue" />
 ```
 
 ```js
@@ -37,7 +37,7 @@ methods: {
 通过`disabled`控制禁用状态
 
 ```html
-<sun-radio v-model="value2" :options="options2" />
+<s-radio v-model="value2" :options="options2" />
 ```
 
 ```js
@@ -68,7 +68,7 @@ data() {
 通过`align`设置右对齐
 
 ```html
-<sun-radio align="right" v-model="value3" :options="options3" />
+<s-radio align="right" v-model="value3" :options="options3" />
 ```
 
 ```js

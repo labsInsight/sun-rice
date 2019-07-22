@@ -20,8 +20,8 @@ Import all components.
 
 ```javascript
 import Vue from 'vue'
-import { install as SunRice } from 'sun-rice'
-import 'sun-rice/dist/static/css/sun-rice.css'
+import SunRice from 'sun-rice'
+import 'sun-rice/dist/sun-rice.css'
 
 Vue.use(SunRice)
 ```

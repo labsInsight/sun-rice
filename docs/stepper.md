@@ -12,7 +12,7 @@ Vue.use(SunStepper);
 #### 基础用法
 
 ```html
-<sun-stepper v-model="value" />
+<s-stepper v-model="value" />
 ```
 
 ```javascript
@@ -29,7 +29,7 @@ export default {
 通过设置`disabled`属性来禁用 stepper
 
 ```html
-<sun-stepper v-model="value" disabled />
+<s-stepper v-model="value" disabled />
 ```
 
 #### 高级用法
@@ -37,7 +37,7 @@ export default {
 可以对组件设置`step`、`min`、`max`属性
 
 ```html
-<sun-stepper
+<s-stepper
   v-model="value"
   integerOnly
   :min="5"

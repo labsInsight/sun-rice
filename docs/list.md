@@ -13,13 +13,13 @@ Vue.use(SunList);
 #### 基础用法
 
 ```html
-<sun-list
+<s-list
   v-model="loading"
   :finished="finished"
   @load="onLoad"
 >
-  <sun-cell v-for="item in list" :key="item" :title="item + ''" />
-</sun-list>
+  <s-cell v-for="item in list" :key="item" :title="item + ''" />
+</s-list>
 ```
 
 ```js

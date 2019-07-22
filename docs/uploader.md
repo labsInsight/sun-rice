@@ -12,9 +12,9 @@ Vue.use(SunUploader);
 #### 基础用法
 
 ```html
-<sun-uploader :after-read="onRead">
+<s-uploader :after-read="onRead">
   <img v-if="dataImg" :src="dataImg" />
-</sun-uploader>
+</s-uploader>
 ```
 
 ```javascript
@@ -37,9 +37,9 @@ export default {
 可以直接在 Uploader 上设置 accpet、multiple 等原生属性，input 会自动继承该属性
 
 ```html
-<sun-uploader :after-read="onRead" accept="image/gif, image/jpeg" multiple>
+<s-uploader :after-read="onRead" accept="image/gif, image/jpeg" multiple>
   <img v-if="dataImg" :src="dataImg" />
-</sun-uploader>
+</s-uploader>
 ```
 
 ### API
