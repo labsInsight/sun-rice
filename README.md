@@ -2,7 +2,7 @@
 
 > Mobile UI elements for **Vue 2.0**
 
-# Demo
+## Demo
 
 - [demo 地址](https://stg1-wechat.jinbaochuang.com/sun-rice/#/)
 
