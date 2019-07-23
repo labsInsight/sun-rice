@@ -19,7 +19,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>iview example</title>
+  <title>sun-rice example</title>
   <!-- import Vue.js -->
   <script src="//vuejs.org/js/vue.min.js"></script>
   <!-- import stylesheet -->
