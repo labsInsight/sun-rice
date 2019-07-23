@@ -11,13 +11,45 @@
 ## Tutorial
 > 点击查看[使用教程](./SUMMARY.md)
 
-## Installation
+## Usage
 
+### CDN 方式：
+```shell
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>iview example</title>
+  <!-- import Vue.js -->
+  <script src="//vuejs.org/js/vue.min.js"></script>
+  <!-- import stylesheet -->
+  <link rel="stylesheet" href="//unpkg.com/sun-rice/dist/sun-rice.css">
+  <!-- import sun-rice -->
+  <script src="//unpkg.com/sun-rice/dist/sun-rice.umd.min.js"></script></head>
+<body>
+<div id="app">
+    <s-button type="default" @click="onClick">Click me!</s-button>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      onClick() {
+        this.$dialog.alert({
+          message: '欢迎使用sun-rice ^_^'
+        })
+      }
+    }
+  })
+</script>
+</body>
+</html>
+```
+
+### npm 方式：
 ```shell
 npm i sun-rice -S
 ```
-
-## Usage
 
 Import all components.
 
