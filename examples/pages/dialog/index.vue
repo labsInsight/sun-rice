@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import SunDialog from '../'
+import SunDialog from '@/components/base/dialog'
 
 export default {
   name: 'sun-dialog-demo',
