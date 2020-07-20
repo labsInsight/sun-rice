@@ -4,8 +4,6 @@
 
 ## Demo
 
-- [demo 地址](https://stg1-wechat.jinbaochuang.com/sun-rice/#/)
-
 ![image](https://activity-photo-1255552770.cos.ap-chengdu.myqcloud.com/sun-rice/logo.png)
 
 ## Tutorial
